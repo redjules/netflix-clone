@@ -1,3 +1,4 @@
+import { firebaseConfig } from "./config";
 import { initializeApp } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
@@ -7,15 +8,6 @@ import {
 } from "firebase/auth";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { toast } from "react-toastify";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBbVeW_BmPi9af5h4nsUiFerTe3_RFB9Xk",
-  authDomain: "netflix-clone-1d0ea.firebaseapp.com",
-  projectId: "netflix-clone-1d0ea",
-  storageBucket: "netflix-clone-1d0ea.firebasestorage.app",
-  messagingSenderId: "796066996308",
-  appId: "1:796066996308:web:ed355713d327deee824dc1",
-};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
